@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const celulaPeriferico = novaLinha.insertCell(1);
         const celulaData = novaLinha.insertCell(2);
         const celulaSetor = novaLinha.insertCell(3);
-        const celulaAcoes = novaLinha.insertCell(4); // Nova célula para os botões de ações
+        const celulaAcoes = novaLinha.insertCell(4); 
 
         celulaNome.textContent = registro.nome;
         celulaPeriferico.textContent = registro.periferico;
@@ -29,9 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Função para exportar os dados para Excel
+
+celularaPeriferic.tex
+
+// esta função ela deve formata o dado pra poder exportar exe 
 function exportarParaExcel() {
-    const registros = JSON.parse(localStorage.getItem('registros')) || [];
+    const registros = JSON.parse(localStorage.getItem('registros da base de dados que seram exportadas para um arquivo excel ')) || [];
     const dados = registros.map(function(registro) {
         return [registro.nome, registro.periferico, formatarData(registro.data), registro.setor];
     });
