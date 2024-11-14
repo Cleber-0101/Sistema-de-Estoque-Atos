@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Retirada de Equipamentos</title>
     <link rel="stylesheet" href="retirada.css">
+    <!-- Importação da biblioteca SheetJS para exportação para Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
 </head>
 <body>
 
     <div class="container">
         <h1>Controle de Retirada de Equipamentos</h1>
 
+        <!-- Botão para Exportar para Excel -->
+        <button id="exportar-excel" class="btn-exportar">Salvar dados no Excel</button>
+
         <!-- Formulário de registro -->
         <form id="registro-form">
             <div class="form-group">
                 <label for="nome-colaborador">Nome do Colaborador:</label>
-                <input type="text" id="nome-colaborador" required placeholder="Digite o nome do colaborador">
+                <input type="text" id="nome-colaborador" required placeholder="Digite o seu nome">
             </div>
             <div class="form-group">
                 <label for="periferico">Periférico Obtido:</label>
@@ -47,10 +52,9 @@
                     <option value="treinamento">Treinamento</option>
                 </select>
             </div>
-            <button id="submit-btn" type="submit">Registrar Troca</button> <!-- Botão com id -->
+            <button id="submit-btn" type="submit">Registrar Troca</button>
         </form>
         
-
         <!-- Tabela de histórico -->
         <h2>Registros de Retiradas</h2>
         <table id="historico-trocas">
@@ -60,11 +64,11 @@
                     <th>Periférico</th>
                     <th>Data</th>
                     <th>Setor</th>
-                    <th>Ações</th> <!-- Coluna para os botões de editar e excluir -->
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Linhas de histórico serão inseridas aqui via JavaScript -->
+                <!-- linha de historicos serão inseridas no java script da pagina -->
             </tbody>
         </table>
     </div>

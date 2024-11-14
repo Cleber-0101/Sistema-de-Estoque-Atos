@@ -1,16 +1,18 @@
-/* styles.css */
+/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
 }
 
+/* Container principal */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -20,10 +22,12 @@ body {
     margin-top: 30px;
 }
 
+/* Títulos */
 h1, h2 {
     color: #333;
 }
 
+/* Estilo do formulário */
 form {
     margin-bottom: 20px;
 }
@@ -34,6 +38,7 @@ label {
     font-weight: bold;
 }
 
+/* Estilo dos inputs, selects e botões */
 input, select, button {
     width: 100%;
     padding: 10px;
@@ -42,6 +47,7 @@ input, select, button {
     border-radius: 4px;
 }
 
+/* Estilo do botão */
 button {
     background-color: #4CAF50;
     color: white;
@@ -52,6 +58,7 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Tabela de histórico */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -67,23 +74,63 @@ th, td {
     text-align: left;
 }
 
-button.editar, button.excluir {
+/* Estilo dos botões de editar e excluir */
+button.editar, button.excluir, .btn-exportar {
     padding: 5px 10px;
     margin: 0 5px;
     border: none;
-    background-color: #f0ad4e;
-    color: white;
     cursor: pointer;
 }
 
-button.editar:hover, button.excluir:hover {
-    background-color: #e97d34;
+/* Estilo para o botão de exportar */
+.btn-exportar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Espaço abaixo do botão */
 }
 
-button.excluir {
-    background-color: #d9534f;
+.btn-exportar:hover {
+    background-color: #45a049;
 }
 
-button.excluir:hover {
-    background-color: #c9302c;
+/* Alinhamento centralizado do botão */
+.btn-exportar {
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza o botão */
+    font-size: 16px;
+}
+
+/* Ajustes no formulário e tabela para diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Ajustes nos botões */
+    button, button.editar, button.excluir, .btn-exportar {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table th, table td {
+        padding: 5px;
+        font-size: 12px; /* Menor fonte para celular */
+    }
 }
