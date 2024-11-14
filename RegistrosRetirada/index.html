@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Retirada de Equipamentos</title>
+    <link rel="stylesheet" href="retirada.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Controle de Retirada de Equipamentos</h1>
+
+        <!-- Formulário de registro -->
+        <form id="registro-form">
+            <div class="form-group">
+                <label for="nome-colaborador">Nome do Colaborador:</label>
+                <input type="text" id="nome-colaborador" required placeholder="Digite o nome do colaborador">
+            </div>
+            <div class="form-group">
+                <label for="periferico">Periférico Obtido:</label>
+                <select id="periferico" required>
+                    <option value="mouse">Mouse</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="headset">Headset</option>
+                    <option value="cabo">Cabo de Rede</option>
+                    <option value="computador">Computador</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data">Data da Troca:</label>
+                <input type="date" id="data" required>
+            </div>
+            <div class="form-group">
+                <label for="setor">Selecione o Setor:</label>
+                <select id="setor" required>
+                    <option value="administrativo">Administrativo</option>
+                    <option value="comercial">Comercial</option>
+                    <option value="diretoria">Diretoria</option>
+                    <option value="gestao">Gestão</option>
+                    <option value="juridico">Jurídico</option>
+                    <option value="processual">Processual</option>
+                    <option value="juridico-imovel">Jurídico-Imóvel</option>
+                    <option value="gerencia">Gerência</option>
+                    <option value="tecnologico">Tecnológico</option>
+                    <option value="treinamento">Treinamento</option>
+                </select>
+            </div>
+            <button id="submit-btn" type="submit">Registrar Troca</button> <!-- Botão com id -->
+        </form>
+        
+
+        <!-- Tabela de histórico -->
+        <h2>Registros de Retiradas</h2>
+        <table id="historico-trocas">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Periférico</th>
+                    <th>Data</th>
+                    <th>Setor</th>
+                    <th>Ações</th> <!-- Coluna para os botões de editar e excluir -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas de histórico serão inseridas aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <div>
+            <h1 class="footer">Atos Negociações</h1>
+            <h3>Desenvolvido por Cleber Batista</h3>
+        </div>
+    </footer>
+
+</body>
+</html>

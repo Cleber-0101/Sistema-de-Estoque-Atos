@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Itens</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Itens</h1>
+
+        <!-- Formulário para registrar itens -->
+        <form id="registro-form">
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" required>
+                <option value="">Selecione o Tipo</option>
+                <option value="Fone">Fone</option>
+                <option value="Mouse">Mouse</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Computador">Computador</option>
+                <option value="Cabos">Cabos</option>
+                <option value="HDMI">HDMI</option>
+                <option value="VGA">VGA</option>
+                <option value="Headset">Headset</option>
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" min="1" required placeholder="Ex: 5">
+            
+            <button type="submit" id="submit-btn">Registrar Item</button>
+        </form>
+
+        <!-- Tabela de Registro de Itens -->
+        <h2>Itens Registrados</h2>
+        <table id="itens-tabela">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os itens serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+
+        <button id="exportar-btn">Exportar para Excel</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
